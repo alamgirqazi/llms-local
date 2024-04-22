@@ -1,4 +1,4 @@
-# A simple repo which shows you how you can run LLMs offline / locally on your laptop 
+# A simple repo which shows you how you can run LLMs offline / locally on your laptop 
 
 ## Setup
 
