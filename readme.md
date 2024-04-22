@@ -11,5 +11,18 @@
 
 `pip install -r requirements.txt`
 
-`python main.py`
+#### There are two variants 
+
+1. LLM with UI (Gradio)
+
+```
+python main.py
+```
+
+head over to http://127.0.0.1:7860
+
+
+2. LLM without UI (Console)
+   
+`python run-without-ui.py`
 
