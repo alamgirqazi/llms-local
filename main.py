@@ -3,18 +3,21 @@ import json
 import gradio as gr
 
 url = 'http://localhost:11434/api/generate'
-custom_prompt = 'Best football player at liverpool ?'
 llm_model = 'llama3'  # mistral:7b, mistral:latest, llama2
+
+convo_history = []
 
 
 def api_response(custom_prompt):
+    convo_history.append(custom_prompt)
+    full_prompt = "\n".join(convo_history)
     data = {'model': llm_model,
-            'prompt': custom_prompt,
+            'prompt': full_prompt,
             'stream': False
             }
     result = requests.post(url, data=json.dumps(data))
     data = json.loads(result.text)
-
+    convo_history.append(data['response'])
     return data['response']
 
 
