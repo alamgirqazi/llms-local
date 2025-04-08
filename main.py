@@ -3,10 +3,9 @@ import json
 import gradio as gr
 
 url = 'http://localhost:11434/api/generate'
-llm_model = 'llama3'  # mistral:7b, mistral:latest, llama2
+llm_model = 'deepseek-r1:7b'  # mistral:7b, mistral:latest, llama2
 
 convo_history = []
-
 
 def api_response(custom_prompt):
     convo_history.append(custom_prompt)
